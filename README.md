@@ -14,7 +14,7 @@ This is QQ strategies collection for OmniAuth 1.0, which includes TQQ and QQ-Con
 Add to your `Gemfile`:
 
 ```ruby
-gem 'omniauth-weibo-oauth2'
+gem 'omniauth-qq'
 ```
 
 Then `bundle install`.
