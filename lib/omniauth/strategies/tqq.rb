@@ -36,10 +36,10 @@ module OmniAuth
       info do
         {
           :nickname => raw_info['data']['nick'],
-          :email => raw_info['data']['email'],
+          :email => (raw_info['data']['email'] if raw_info['data']['email'].present?),
           :name => raw_info['data']['name'],
           :location => raw_info['data']['location'],
-          :image => raw_info['data']['head'] + '/40',
+          :image => (raw_info['data']['head']+'/40' if raw_info['data']['head'].present?),
           :description => raw_info['data']['introduction'],
           :urls => {
             'Tqq' => 't.qq.com/' + raw_info['data']['name']
